@@ -1199,7 +1199,7 @@ static NSString * __HTMLEntityForCharacter(unichar character)
 
 - (MMElement *)_parseTableRowWithScanner:(MMScanner *)scanner columns:(NSArray *)columns
 {
-    NSMutableCharacterSet *trimmingSet = NSMutableCharacterSet.whitespaceCharacterSet;
+    NSMutableCharacterSet *trimmingSet = NSMutableCharacterSet.illegalCharacterSet;
     [trimmingSet addCharactersInString:@"|"];
     
     NSValue   *lineRange   = [NSValue valueWithRange:scanner.currentRange];
